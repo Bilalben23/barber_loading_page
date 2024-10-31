@@ -4,10 +4,19 @@ export default {
     "./src/**/*.{ts,js,tsx,jsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        mainColor: "#FBB034",
+        secondaryColor: "#9A9A9A"
+      }
+    },
   },
   plugins: [
     require("daisyui")
   ],
+  daisyui: {
+    themes: true,
+    darkTheme: "synthwave"
+  }
 }
 
