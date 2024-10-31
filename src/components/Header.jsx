@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <header
             className='fixed top-0 z-10 flex items-center justify-between w-full px-8 py-1 border-b border-gray-900'
-            style={{ background: `url(${backgroundImg}) center no-repeat`, backgroundSize: "cover" }}
+            style={{ background: `url(${backgroundImg}) center center no-repeat`, backgroundSize: "cover" }}
         >
             <div>
                 <img src={logo} alt="logo" className='w-16 h-16' />
