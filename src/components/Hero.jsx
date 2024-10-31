@@ -9,12 +9,12 @@ import { BiListCheck } from 'react-icons/bi';
 export default function Hero() {
     return (
         <div className='w-full h-auto md:h-screen pt-[90px] flex flex-col-reverse md:flex-row justify-between gap-x-4' style={{ background: `url(${backgroundImg}) center no-repeat`, backgroundSize: "cover" }}>
-            <div className='self-center flex-1 px-6 mt-4 md:px-12 md:mt-0'>
+            <div className='self-center flex-1 px-6 pb-5 mt-4 md:pb-0 md:px-12 md:mt-0'>
                 <div>
                     <h1 className='mb-3 text-sm text-error'>Welcome To Choppers</h1>
-                    <p className='mb-3 text-4xl font-semibold'>Best Hair Salon For A Professional Look</p>
+                    <p className='mb-3 text-2xl font-semibold md:text-4xl'>Best Hair Salon For A Professional Look</p>
                     <p className='opacity-60'>Choppers offers high performance customized facials to provide you with visible results.</p>
-                    <div className='flex items-center justify-between mt-12 md:justify-start gap-x-14'>
+                    <div className='flex items-center justify-around mt-12 md:justify-start gap-x-14'>
                         <button type="button" className='flex items-center rounded-full btn btn-secondary'>
                             <FaCalendarCheck />
                             Book Now
