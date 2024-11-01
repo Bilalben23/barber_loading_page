@@ -13,7 +13,7 @@ export default function AboutUs() {
                 <h2 className='mb-2 text-sm text-error'>About us</h2>
                 <p className='mb-2 text-2xl font-semibold md:text-3xl lg:text-4xl'>Premium Haircut & Grooming Salon for Men</p>
                 <p className='mb-5 md:mb-10 opacity-60'>Let your hairdressers do their amazing job. Trim the hair to get your desired look. Book appointment with us for your favorite hair Styles!</p>
-                <Link to="#" className='rounded-full btn btn-secondary'>
+                <Link to="#" className='rounded-full shadow btn btn-secondary'>
                     Read More
                     <span className='btn btn-ghost btn-circle btn-sm'>
                         <FaChevronRight />
