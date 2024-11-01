@@ -7,7 +7,7 @@ import SmallMenu from './SmallMenu';
 export default function Header() {
     return (
         <header
-            className='fixed top-0 z-10 flex items-center justify-between w-full px-8 py-1 border-b border-gray-900'
+            className='fixed top-0 z-50 flex items-center justify-between w-full px-2 py-1 border-b border-gray-900 sm:px-8'
             style={{ background: `url(${backgroundImg}) center center no-repeat`, backgroundSize: "cover" }}
         >
             <div>

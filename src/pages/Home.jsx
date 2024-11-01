@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs'
 import BookNow from '../components/BookNow'
 import WorkingDays from '../components/WorkingDays'
 import Testimonials from '../components/Testimonials'
+import Services from '../components/Services'
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                 <BookNow />
                 <WorkingDays />
                 <Testimonials />
+                <Services />
             </main>
         </>
     )

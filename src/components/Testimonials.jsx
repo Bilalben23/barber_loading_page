@@ -17,16 +17,17 @@ export default function Testimonials() {
                 </a>
             </div>
 
-            <dv className='flex-1 py-5 overflow-x-auto carousel gap-x-6'>
+            <div className="flex-1 py-5 overflow-x-auto carousel gap-x-6">
                 {
-                    testimonialsData.map(testimonial => {
-                        return <TestimonialCard
+                    testimonialsData.map(testimonial => (
+                        <TestimonialCard
                             key={testimonial.id}
                             testimonial={testimonial}
                         />
-                    })
+                    ))
                 }
-            </dv>
+            </div>
+
         </div>
     )
 }

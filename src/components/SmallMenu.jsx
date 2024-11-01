@@ -29,11 +29,11 @@ export default function SmallMenu() {
             </button>
 
             <div
-                className={`fixed right-0 top-[85px] h-[calc(100vh-88px)] w-full p-5 transition-all duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed right-0 z-10 top-[72px] h-[calc(100vh-72px)] w-full p-5 transition-all duration-300 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
                 style={{ background: `url(${backgroundImg}) center no-repeat`, backgroundSize: "cover" }}
             >
-                <nav >
-                    <ul className='w-full menu menu-vertical *:text-lg' >
+                <nav>
+                    <ul className='w-full pt-5 menu menu-vertical *:text-lg' >
                         <li>
                             <ScrollLink
                                 to="home"
@@ -43,7 +43,7 @@ export default function SmallMenu() {
                                 duration={500}
                                 onClick={closeMenu}
                             >
-                                <FaHome />
+                                <FaHome size={25} />
                                 Home
                             </ScrollLink>
                         </li>
@@ -55,7 +55,7 @@ export default function SmallMenu() {
                                 offset={-70}
                                 duration={500}
                             >
-                                <FaInfoCircle />
+                                <FaInfoCircle size={25} />
                                 About Us
                             </ScrollLink>
                         </li>
@@ -67,7 +67,7 @@ export default function SmallMenu() {
                                 offset={-70}
                                 duration={500}
                             >
-                                <FaServicestack />
+                                <FaServicestack size={25} />
                                 Services
                             </ScrollLink>
                         </li>
@@ -79,15 +79,15 @@ export default function SmallMenu() {
                                 offset={-70}
                                 duration={500}
                             >
-                                <FaEnvelope />
+                                <FaEnvelope size={25} />
                                 Contact
                             </ScrollLink>
                         </li>
                     </ul>
                 </nav>
                 <div className='pl-5 mt-4'>
-                    <button type='button' className='flex items-center h-[50px] rounded-full btn-outline btn btn-sm btn-secondary'>
-                        <FaCalendarAlt size={20} />
+                    <button type='button' className='flex items-center h-[50px] rounded-full btn-outline btn btn-secondary'>
+                        <FaCalendarAlt size={25} />
                         Book Now
                     </button>
                 </div>
