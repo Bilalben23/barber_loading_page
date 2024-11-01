@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ServiceDetailsCard() {
+export default function WhatsappIcon() {
     return (
         <div>
 

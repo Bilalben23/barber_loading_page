@@ -1,7 +1,7 @@
 import { FaStar } from "react-icons/fa"
 
 export default function TestimonialCard({ testimonial }) {
-    return <button type="button" target='_blank' className='w-[calc(100%-42px)] mx-auto sm:w-[calc(50%-57px)] rounded-sm flex-col p-4 border carousel-item shadow-lg bg-[#f5f5f5] text-black'>
+    return <button type="button" target='_blank' className='w-[calc(100%-80px)] mx-auto sm:w-[calc(50%-57px)] rounded-sm flex-col p-4 border carousel-item shadow-lg bg-[#f5f5f5] text-black'>
         <div className='mx-auto avatar'>
             <div className='w-16 h-16 border-2 border-gray-200 rounded-full'>
                 <img src={testimonial.reviewerImage} alt={testimonial.name} className='' />

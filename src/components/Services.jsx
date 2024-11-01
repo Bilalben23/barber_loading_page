@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { services } from "../data/services"
-import ServiceIconCard from '../cards/ServiceIconCard '
+import ServiceIconCard from '../cards/ServiceIconCard'
+import ServiceDetailsCard from "../cards/ServiceDetailsCard"
 
 export default function Services() {
 
-    const [selectedService, setSelectedService] = useState(1)
+    const [selectedServiceId, setSelectedServiceId] = useState(1)
 
 
     function handleSelectedService(id) {
-        setSelectedService(id)
+        setSelectedServiceId(id)
     }
+
+    const selectedService = services.find(service => service.id === selectedServiceId)
 
 
     return (
@@ -20,11 +23,11 @@ export default function Services() {
             </div>
             <div className='w-[90%] mx-auto mt-8'>
                 <div className='w-[95%] md:w-[90%] mx-auto'>
-                    <div className='w-full py-2 overflow-x-auto shadow-inner carousel gap-x-4'>
+                    <div className='w-full py-2 overflow-x-auto shadow-inner carousel-center md:carousel-start carousel gap-x-4'>
                         {
                             services.map(service => <ServiceIconCard
                                 key={service.id}
-                                isActiveTab={service.id === selectedService}
+                                isActiveTab={service.id === selectedServiceId}
                                 service={service}
                                 handleSelectedService={handleSelectedService}
                             />
@@ -32,6 +35,9 @@ export default function Services() {
                         }
                     </div>
                 </div>
+
+                <ServiceDetailsCard service={selectedService} />
+
             </div>
         </section>
     )

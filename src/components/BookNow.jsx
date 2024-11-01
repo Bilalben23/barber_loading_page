@@ -23,7 +23,7 @@ export default function BookNow() {
                     <a href='tel:+212664897030' className='block w-full p-10'>
                         <div className='mx-auto mb-2.5 w-fit'>
                             <button type="button" className='btn btn-circle btn-neutral'>
-                                <FaPhone />
+                                <FaPhone size={23} />
                             </button>
                         </div>
                         <p className='mb-1 font-semibold text-center opacity-90'>Call Now</p>

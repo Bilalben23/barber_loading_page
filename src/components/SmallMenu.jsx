@@ -86,7 +86,7 @@ export default function SmallMenu() {
                     </ul>
                 </nav>
                 <div className='pl-5 mt-4'>
-                    <button type='button' className='flex items-center h-[50px] rounded-full btn-outline btn btn-secondary'>
+                    <button type='button' className='flex items-center h-[50px] rounded-full btn-outline btn btn-secondary text-lg'>
                         <FaCalendarAlt size={25} />
                         Book Now
                     </button>
