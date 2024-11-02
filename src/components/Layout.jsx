@@ -2,8 +2,8 @@ import React from 'react'
 import Header from './Header'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
-import WhatsappIcon from './WhatsappIcon'
-import PhoneIcon from './PhoneIcon'
+import BackTopBtn from './BackTopBtn'
+import ContactButtons from "../components/ContactButtons"
 
 export default function Layout() {
     return (
@@ -11,11 +11,8 @@ export default function Layout() {
             <Header />
             <Outlet />
             <Footer />
-            <div className='fixed flex flex-col bottom-2 left-2 gap-y-2'>
-                <WhatsappIcon />
-                <PhoneIcon />
-            </div>
-
+            <ContactButtons />
+            <BackTopBtn />
         </>
     )
 }
