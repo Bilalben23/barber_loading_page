@@ -12,7 +12,7 @@ export default function BookNow() {
         >
             <div className='flex w-[85%] items-center flex-col md:flex-row justify-between gap-x-12 md:w-[80%] mx-auto'>
                 <div>
-                    <h3 className='mb-2 text-sm text-error'>Book Now</h3>
+                    <h3 className='mb-2 text-sm font-semibold text-error'>Book Now</h3>
                     <p className='mb-2 text-2xl font-semibold md:text-xl lg:text-4xl md:w-[90%]'>Book your Appointment Online.</p>
                     <p className='mb-3 md:mb-6 opacity-60 md:w-3/4'>Get 10% Discount on your first hair cut by using our website.</p>
                     <Link to="#" className='rounded-full btn btn-secondary'>
@@ -28,7 +28,7 @@ export default function BookNow() {
                             </button>
                         </div>
                         <p className='mb-1 font-semibold text-center opacity-90'>Call Now</p>
-                        <p className='font-mono text-lg font-semibold text-center'>{PHONE_NUMBER}</p>
+                        <p className='font-sans text-lg font-semibold text-center'>{PHONE_NUMBER}</p>
                     </a>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaWhatsapp, FaPhone, FaComment, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaPhone, FaEnvelope, FaCommentDots } from 'react-icons/fa';
 import clickSoundAudio from "../assets/tic-toc-click.wav"
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -116,7 +116,7 @@ export default function ContactButtons() {
                         onClick={toggleButtons}
                         className={`btn btn-circle btn-neutral btn-outline`}
                     >
-                        <FaComment size={25} />
+                        <FaCommentDots size={25} />
                     </button>
                 </div>
             </div>
