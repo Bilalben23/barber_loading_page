@@ -14,9 +14,9 @@ export default function Hero() {
         >
             <div className='self-center flex-1 px-6 pb-5 mt-4 md:pb-0 md:px-12 md:mt-0'>
                 <div>
-                    <h1 className='mb-3 text-sm text-error'>Welcome To Choppers</h1>
+                    <h1 className='mb-3 text-sm text-error'>Welcome To Barbero</h1>
                     <p className='mb-3 text-2xl font-semibold md:text-3xl lg:text-4xl'>Best Hair Salon For A Professional Look</p>
-                    <p className='opacity-60'>Choppers offers high performance customized facials to provide you with visible results.</p>
+                    <p className='opacity-60'>Barbero offers high performance customized facials to provide you with visible results.</p>
                     <div className='flex items-center justify-around mt-12 md:justify-start gap-x-14'>
                         <button type="button" className='flex items-center rounded-full shadow btn btn-secondary'>
                             <FaCalendarCheck />
