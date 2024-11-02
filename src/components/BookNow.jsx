@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCalendarAlt, FaPhone } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import img5 from "../assets/img5.png"
+const PHONE_NUMBER = import.meta.env.VITE_PHONE_NUMBER;
 
 export default function BookNow() {
     return (
@@ -27,7 +28,7 @@ export default function BookNow() {
                             </button>
                         </div>
                         <p className='mb-1 font-semibold text-center opacity-90'>Call Now</p>
-                        <p className='font-mono text-lg font-semibold text-center'>+212664897030</p>
+                        <p className='font-mono text-lg font-semibold text-center'>{PHONE_NUMBER}</p>
                     </a>
                 </div>
             </div>

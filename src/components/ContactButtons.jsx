@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaWhatsapp, FaPhone, FaComment, FaEnvelope } from 'react-icons/fa';
+import clickSoundAudio from "../assets/tic-toc-click.wav"
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
 const PHONE_NUMBER = import.meta.env.VITE_PHONE_NUMBER;
@@ -10,8 +11,14 @@ export default function ContactButtons() {
     const [areButtonsVisible, setAreButtonsVisible] = useState(false);
     const [shouldRenderButtons, setShouldRenderButtons] = useState(false);
     const buttonRef = useRef(null); // Reference to the button container
+    const audioRef = useRef(null); // Reference to the audio element
 
     const toggleButtons = () => {
+        // Play sound on click
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+
         if (!areButtonsVisible) {
             setShouldRenderButtons(true);
         }
@@ -40,8 +47,17 @@ export default function ContactButtons() {
         }
     }, [areButtonsVisible]);
 
+
+
     return (
         <div className='fixed z-10 bottom-0 left-0 md:bottom-2 md:left-2'>
+
+            <audio ref={audioRef}>
+                <source src={clickSoundAudio} type="audio/wav" />
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+
+
             {/* For larger screens: laptop, desktop */}
             <div className='hidden md:block'>
                 <a
@@ -63,7 +79,7 @@ export default function ContactButtons() {
                         <div className='absolute top-0 left-2'>
                             <a
                                 href={`tel:${PHONE_NUMBER}`}
-                                className='btn btn-outline btn-info btn-circle'
+                                className='btn btn-info btn-circle'
                                 rel='noopener noreferrer'
                                 target='_blank'
                             >
@@ -73,7 +89,7 @@ export default function ContactButtons() {
                         <div className='absolute top-2 right-2'>
                             <a
                                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${MESSAGE}`}
-                                className='btn btn-outline btn-success btn-circle'
+                                className='btn btn-success btn-circle'
                                 rel='noopener noreferrer'
                                 target='_blank'
                             >
@@ -85,7 +101,7 @@ export default function ContactButtons() {
                                 href={`mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent('Appointment Request')}&body=${encodeURIComponent(
                                     'Hi there,\n\nI would like to book an appointment.\n\nPreferred Date: \nPreferred Time: \n\nThank you!'
                                 )}`}
-                                className='btn btn-outline btn-primary btn-circle'
+                                className='btn btn-primary btn-circle'
                                 rel='noopener noreferrer'
                                 target='_blank'
                             >
@@ -98,7 +114,7 @@ export default function ContactButtons() {
                 <div className='absolute bottom-2 left-2'>
                     <button
                         onClick={toggleButtons}
-                        className={`btn btn-circle btn-neutral btn-outline ${areButtonsVisible && "btn-active"}`}
+                        className={`btn btn-circle btn-neutral btn-outline`}
                     >
                         <FaComment size={25} />
                     </button>
