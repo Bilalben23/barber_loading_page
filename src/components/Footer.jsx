@@ -11,7 +11,7 @@ const EMAIL_ADDRESS = import.meta.env.VITE_EMAIL_ADDRESS;
 export default function Footer() {
     const date = new Date();
     return (
-        <footer className='px-5 py-10 border-t border-gray-700 shadow-lg bg-base-300'>
+        <footer className='py-10 border-t border-gray-700 shadow-lg md:px-5 bg-base-300'>
             <div className='w-full'>
                 <iframe
                     title="Our Location"
@@ -22,32 +22,34 @@ export default function Footer() {
                     loading="lazy"
                 ></iframe>
             </div>
-            {/* Contact Section */}
-            <div className='my-8'>
-                <h6 className='mb-5 text-xl font-bold text-center text-error'>Get In Touch </h6>
-                <div className="flex flex-wrap items-center justify-between gap-5">
-                    <ContactItem icon={FaMapMarkerAlt} title="Our Address" content="123 Main Street, City, ZIP Code, Country" />
-                    <ContactItem icon={FaPhone} title="Call Us" content={PHONE_NUMBER} />
-                    <ContactItem icon={FaWhatsapp} title="Chat With Us" content={WHATSAPP_NUMBER} />
-                    <ContactItem icon={FaEnvelope} title="Email Us" content={EMAIL_ADDRESS} />
-                </div>
-            </div>
 
-            <hr className='w-[80%] mx-auto opacity-25' />
-
-            <div className='flex flex-col-reverse items-center mt-8 gap-y-4 justify-evenly md:flex-row'>
-                <div>
-                    <div className='flex items-center text-sm gap-x-1'>
-                        <FaCopyright />
-                        <p><span className='font-sans'>{date.getFullYear()} </span> All Copyrights Reserved To Barbero</p>
+            <div className='px-5'>
+                {/* Contact Section */}
+                <div className='my-8'>
+                    <h6 className='mb-5 text-xl font-bold text-center text-error'>Get In Touch </h6>
+                    <div className="flex flex-wrap items-center justify-between gap-5">
+                        <ContactItem icon={FaMapMarkerAlt} title="Our Address" content="123 Main Street, City, ZIP Code, Country" />
+                        <ContactItem icon={FaPhone} title="Call Us" content={PHONE_NUMBER} />
+                        <ContactItem icon={FaWhatsapp} title="Chat With Us" content={WHATSAPP_NUMBER} />
+                        <ContactItem icon={FaEnvelope} title="Email Us" content={EMAIL_ADDRESS} />
                     </div>
                 </div>
-                <div className='flex items-center gap-x-4'>
-                    <SocialIcon tooltip="Facebook" icon={FaFacebook} href="#" color="text-blue-500" />
-                    <SocialIcon tooltip="Instagram" icon={FaInstagram} href="#" color="text-pink-500" />
+
+                <hr className='w-[80%] mx-auto opacity-25' />
+
+                <div className='flex flex-col-reverse items-center mt-8 gap-y-4 justify-evenly md:flex-row'>
+                    <div>
+                        <div className='flex items-center text-sm gap-x-1'>
+                            <FaCopyright />
+                            <p><span className='font-sans'>{date.getFullYear()} </span> All Copyrights Reserved To Barbero</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center gap-x-4'>
+                        <SocialIcon tooltip="Facebook" icon={FaFacebook} href="#" color="text-blue-500" />
+                        <SocialIcon tooltip="Instagram" icon={FaInstagram} href="#" color="text-pink-500" />
+                    </div>
                 </div>
             </div>
-
         </footer >
     )
 }

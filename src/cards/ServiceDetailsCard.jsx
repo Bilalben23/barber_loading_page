@@ -9,7 +9,7 @@ export default function ServiceDetailsCard({ service }) {
             </div>
             <div className='mt-5 md:w-1/2 md:mt-0'>
                 <p className='mb-2 text-lg font-semibold md:text-xl md:w-3/4 lg:text-2xl'>{service.title}</p>
-                <p className='opacity-60'>{service.description}</p>
+                <p className='text-gray-500'>{service.description}</p>
                 <div className='flex flex-col mt-5 ml-5 gap-y-2'>
                     {
                         service.benefits.map((benefit, index) => {

@@ -8,13 +8,13 @@ export default function TestimonialCard({ testimonial }) {
             </div>
         </div>
         <div className='mt-2'>
-            <p className='text-sm font-semibold line-clamp-4 opacity-70'>{testimonial.text}</p>
+            <p className='text-sm font-semibold text-gray-500 line-clamp-4'>{testimonial.text}</p>
             <div className='flex flex-wrap items-center mx-auto mt-2 gap-x-2 w-fit'>
                 {
                     Array(5).fill().map((_, index) => {
                         return <FaStar
                             size={25}
-                            className={`drop-shadow-md hover:animate-spin ${testimonial.stars >= index + 1 ? "text-yellow-400" : "opacity-70"}`}
+                            className={`drop-shadow-md hover:animate-spin ${testimonial.stars >= index + 1 ? "text-yellow-400" : "text-gray-500"}`}
                             key={`star-${index}`}
                         />
                     })
