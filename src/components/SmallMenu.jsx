@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { FaArrowRight, FaBars, FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from 'react-icons/fa'
 import backgroundImg from "../assets/img1.png"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { navigateAndScroll } from '../helpers/navigateAndScroll';
 
 
-export default function SmallMenu({ navigateAndScroll }) {
+export default function SmallMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     function handleMenuToggle() {
@@ -15,6 +16,8 @@ export default function SmallMenu({ navigateAndScroll }) {
         navigateAndScroll(section, -95)
         setIsMenuOpen(false)
     }
+
+    const navigate = useNavigate();
 
 
     return (
@@ -36,25 +39,25 @@ export default function SmallMenu({ navigateAndScroll }) {
                 <nav>
                     <ul className='w-full pt-5 menu menu-vertical *:text-lg' >
                         <li>
-                            <button type='button' onClick={() => closeMenu("home")}>
+                            <button type='button' onClick={() => closeMenu(navigate, "home")}>
                                 <FaHome size={25} />
                                 Home
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu("about")}>
+                            <button type='button' onClick={() => closeMenu(navigate, "about")}>
                                 <FaInfoCircle size={25} />
                                 About Us
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu("services")}>
+                            <button type='button' onClick={() => closeMenu(navigate, "services")}>
                                 <FaListAlt size={25} />
                                 Services
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu("contact")}>
+                            <button type='button' onClick={() => closeMenu(navigate, "contact")}>
                                 <FaEnvelope size={25} />
                                 Contact
                             </button>

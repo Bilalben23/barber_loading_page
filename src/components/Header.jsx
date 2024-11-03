@@ -1,25 +1,12 @@
-import { scroller } from 'react-scroll';
-import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt   } from "react-icons/fa"
+import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from "react-icons/fa"
 import logo from "../assets/img3.svg"
 import backgroundImg from "../assets/img1.png"
 import SmallMenu from './SmallMenu';
 import { Link, useNavigate } from 'react-router-dom';
+import { navigateAndScroll } from "../helpers/navigateAndScroll";
 
 export default function Header() {
-    const navigate = useNavigate();
-
-    // Function to handle navigation and scroll
-    function navigateAndScroll(section, offset = -70) {
-        navigate('/');
-
-        setTimeout(() => {
-            scroller.scrollTo(section, {
-                smooth: true,
-                offset: offset,
-                duration: 500,
-            });
-        }, 100);
-    };
+    const navigate = useNavigate()
 
     return (
         <header
@@ -33,26 +20,26 @@ export default function Header() {
                 <nav>
                     <ul className='text-lg menu menu-horizontal'>
                         <li >
-                            <button type="button" onClick={() => navigateAndScroll("home")}>
+                            <button type="button" onClick={() => navigateAndScroll(navigate, "home")}>
                                 <FaHome />
                                 Home
                             </button>
                         </li>
                         <li >
-                            <button type="button" onClick={() => navigateAndScroll("about")}>
+                            <button type="button" onClick={() => navigateAndScroll(navigate, "about")}>
                                 <FaInfoCircle />
                                 About Us
                             </button>
 
                         </li>
                         <li>
-                            <button type="button" onClick={() => navigateAndScroll("services")}>
+                            <button type="button" onClick={() => navigateAndScroll(navigate, "services")}>
                                 <FaListAlt />
                                 Services
                             </button>
                         </li>
                         <li>
-                            <button type="button" onClick={() => navigateAndScroll("contact")}>
+                            <button type="button" onClick={() => navigateAndScroll(navigate, "contact")}>
                                 <FaEnvelope />
                                 Contact
                             </button>
@@ -67,7 +54,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <SmallMenu navigateAndScroll={navigateAndScroll} />
+            <SmallMenu  />
 
         </header >
     )

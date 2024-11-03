@@ -19,15 +19,15 @@ export default function Layout() {
             {/* Other components */}
             <ToastContainer
                 position="top-center"
-                autoClose={3000} // Toast will close automatically after 3 seconds
-                hideProgressBar={true} // Hide the progress bar
+                autoClose={3000}
+                hideProgressBar={true}
                 closeOnClick
                 draggable
-                theme="colored" // Use colored theme for better visibility
+                theme="colored"
                 style={{
                     margin: '0 auto',
                     zIndex: 9999
-                }} // Ensure toast appears above other elements
+                }}
             />
         </>
     )

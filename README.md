@@ -65,7 +65,7 @@ This app is designed as a visually engaging landing page for **Barbero**, a prem
 ### Visit the Site
 
 - If you want to visit the site, you can find it [here](https://barber-loading-page.vercel.app/).
-![alt text](<Screenshot 2024-11-02 223600.png>)
+  ![alt text](./public/hero_screenshot.png)
 
 ## Copyright
 
