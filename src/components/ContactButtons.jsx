@@ -50,7 +50,7 @@ export default function ContactButtons() {
 
 
     return (
-        <div className='fixed z-10 bottom-0 left-0 md:bottom-2 md:left-2'>
+        <div className='fixed bottom-0 left-0 z-10 md:bottom-2 md:left-2'>
 
             <audio ref={audioRef}>
                 <source src={clickSoundAudio} type="audio/wav" />
@@ -96,12 +96,12 @@ export default function ContactButtons() {
                                 <FaWhatsapp size={30} />
                             </a>
                         </div>
-                        <div className='absolute bottom-2 right-0'>
+                        <div className='absolute right-0 bottom-2'>
                             <a
                                 href={`mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent('Appointment Request')}&body=${encodeURIComponent(
                                     'Hi there,\n\nI would like to book an appointment.\n\nPreferred Date: \nPreferred Time: \n\nThank you!'
                                 )}`}
-                                className='btn btn-primary btn-circle'
+                                className='btn btn-secondary btn-circle'
                                 rel='noopener noreferrer'
                                 target='_blank'
                             >
@@ -114,9 +114,9 @@ export default function ContactButtons() {
                 <div className='absolute bottom-2 left-2'>
                     <button
                         onClick={toggleButtons}
-                        className={`btn btn-circle btn-neutral btn-outline`}
+                        className={`btn  ${areButtonsVisible && 'ring-2'} btn-circle btn-neutral btn-outline`}
                     >
-                        <FaCommentDots size={25} />
+                        <FaCommentDots size={25} className='drop-shadow-lg' />
                     </button>
                 </div>
             </div>

@@ -23,7 +23,7 @@ export default function WorkingDays() {
                         <time className='font-mono'>9Am to 10pm</time>
                     </div>
                 </div>
-                <Link to="#" className='mt-6 rounded-full shadow-md btn btn-error'>
+                <Link to="book-appointment" className='mt-6 rounded-full shadow-md btn btn-error'>
                     <FaCalendarAlt />
                     Book Appointment
                 </Link>

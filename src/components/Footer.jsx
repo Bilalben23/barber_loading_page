@@ -11,7 +11,7 @@ const EMAIL_ADDRESS = import.meta.env.VITE_EMAIL_ADDRESS;
 export default function Footer() {
     const date = new Date();
     return (
-        <footer className='py-10 border-t border-gray-700 shadow-lg md:px-5 bg-base-300'>
+        <footer className='pb-10 md:py-10 border-t border-gray-700 shadow-lg md:px-5 bg-base-300'>
             <div className='w-full'>
                 <iframe
                     title="Our Location"

@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCalendarAlt, FaCheckCircle } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export default function ServiceDetailsCard({ service }) {
     return (
@@ -14,17 +15,18 @@ export default function ServiceDetailsCard({ service }) {
                     {
                         service.benefits.map((benefit, index) => {
                             return <p key={`benefit-${index}`} className='flex items-center space-x-2 text-sm'>
-                                <FaCheckCircle className='shadow text-secondary' />
+                                <FaCheckCircle className='drop-shadow-md text-secondary' />
+
                                 <span className='text-gray-400'>{benefit}</span>
                             </p>
                         })
                     }
                 </div>
                 <div className='mt-5'>
-                    <a href='#' className='rounded-full btn-secondary btn btn-outline'>
+                    <Link to="book-appointment" className='rounded-full btn-secondary btn btn-outline'>
                         <FaCalendarAlt size={20} />
                         Book Now
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

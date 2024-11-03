@@ -3,6 +3,7 @@ import backgroundImg from "../assets/img1.png"
 import img2 from "../assets/img2.png"
 import { FaCalendarCheck } from 'react-icons/fa'
 import { BiListCheck } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,10 +19,10 @@ export default function Hero() {
                     <p className='mb-3 text-2xl font-semibold md:text-3xl lg:text-4xl'>Best Hair Salon For A Professional Look</p>
                     <p className='text-gray-500'>Barbero offers high performance customized facials to provide you with visible results.</p>
                     <div className='flex items-center justify-around mt-12 md:justify-start gap-x-14'>
-                        <button type="button" className='flex items-center rounded-full shadow btn btn-secondary'>
+                        <Link to="book-appointment" className='flex items-center rounded-full shadow btn btn-secondary'>
                             <FaCalendarCheck />
                             Book Now
-                        </button>
+                        </Link>
                         <button type="button" className='flex items-center rounded-full shadow btn btn-outline btn-secondary'>
                             <BiListCheck size={30} />
                             All Services

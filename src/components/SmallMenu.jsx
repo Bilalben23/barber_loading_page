@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaArrowRight, FaBars, FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaServicestack } from 'react-icons/fa'
 import { Link as ScrollLink } from 'react-scroll';
 import backgroundImg from "../assets/img1.png"
+import { Link } from 'react-router-dom';
 
 
 export default function SmallMenu() {
@@ -54,6 +55,7 @@ export default function SmallMenu() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                onClick={closeMenu}
                             >
                                 <FaInfoCircle size={25} />
                                 About Us
@@ -66,6 +68,7 @@ export default function SmallMenu() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                onClick={closeMenu}
                             >
                                 <FaServicestack size={25} />
                                 Services
@@ -78,6 +81,7 @@ export default function SmallMenu() {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}
+                                onClick={closeMenu}
                             >
                                 <FaEnvelope size={25} />
                                 Contact
@@ -86,10 +90,14 @@ export default function SmallMenu() {
                     </ul>
                 </nav>
                 <div className='pl-5 mt-4'>
-                    <button type='button' className='flex items-center h-[50px] rounded-full btn-outline btn btn-secondary text-lg'>
+                    <Link
+                        to="book-appointment"
+                        className='flex items-center h-[50px] rounded-full btn-outline btn btn-secondary text-lg'
+                        onClick={closeMenu}
+                    >
                         <FaCalendarAlt size={25} />
                         Book Now
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

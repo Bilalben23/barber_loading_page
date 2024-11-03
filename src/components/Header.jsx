@@ -3,6 +3,7 @@ import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaServicestack } from 
 import logo from "../assets/img3.svg"
 import backgroundImg from "../assets/img1.png"
 import SmallMenu from './SmallMenu';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -68,10 +69,10 @@ export default function Header() {
                     </ul>
                 </nav>
                 <div>
-                    <button type='button' className='flex items-center rounded-full btn-outline btn btn-secondary'>
+                    <Link to="book-appointment" className='flex items-center rounded-full btn-outline btn btn-secondary'>
                         <FaCalendarAlt size={20} />
                         Book Now
-                    </button>
+                    </Link>
                 </div>
             </div>
 
