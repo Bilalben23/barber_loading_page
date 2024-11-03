@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { FaCalendarCheck } from 'react-icons/fa';
+import { FaCalendarCheck, FaChevronLeft } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -104,7 +105,7 @@ export default function BookAppointment() {
 
             >
                 <div className='mb-4'>
-                    <label htmlFor='name' className='block mb-0.5 font-medium text-gray-500'>Name</label>
+                    <label htmlFor='name' className='block mb-0.5 font-medium text-gray-800'>Name</label>
                     <input
                         type='text'
                         id='name'
@@ -112,12 +113,12 @@ export default function BookAppointment() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className='w-full input input-bordered input-secondary'
+                        className='w-full input input-bordered input-secondary capitalize'
                         placeholder='Your Name...'
                     />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='phone' className='block mb-0.5 font-medium text-gray-500'>Phone Number</label>
+                    <label htmlFor='phone' className='block mb-0.5 font-medium text-gray-800'>Phone Number</label>
                     <input
                         type='tel'
                         id='phone'
@@ -130,7 +131,7 @@ export default function BookAppointment() {
                     />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='date' className='block mb-0.5 font-medium text-gray-500'>Preferred Date</label>
+                    <label htmlFor='date' className='block mb-0.5 font-medium text-gray-800'>Preferred Date</label>
                     <input
                         type='date'
                         id='date'
@@ -143,7 +144,7 @@ export default function BookAppointment() {
                     />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='time' className='block mb-0.5 font-medium text-gray-500'>Preferred Time</label>
+                    <label htmlFor='time' className='block mb-0.5 font-medium text-gray-800'>Preferred Time</label>
                     <input
                         type='time'
                         id='time'
@@ -155,7 +156,7 @@ export default function BookAppointment() {
                     />
                 </div>
                 <div className='mb-4'>
-                    <label htmlFor='message' className='block mb-0.5 font-medium text-gray-500'>Message</label>
+                    <label htmlFor='message' className='block mb-0.5 font-medium text-gray-800'>Message</label>
                     <textarea
                         id='message'
                         name='message'
@@ -171,6 +172,12 @@ export default function BookAppointment() {
                     Book Appointment {loading && "..."}
                 </button>
             </form>
+            <div className='max-w-lg mx-auto mt-3'>
+                <Link to="/" className='btn btn-primary rounded-full'>
+                    <FaChevronLeft size={20} />
+                    Go Back
+                </Link>
+            </div>
         </section>
     );
 }

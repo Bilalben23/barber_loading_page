@@ -16,11 +16,11 @@ export default function WorkingDays() {
                 <div className='flex flex-col gap-y-3'>
                     <div className='flex items-center justify-between py-0.5 border-b-2 border-gray-900 border-dotted'>
                         <p className='font-bold'>Monday</p>
-                        <time className='font-mono'>9Am to 10pm</time>
+                        <time>9Am to 10pm</time>
                     </div>
                     <div className='flex items-center justify-between py-0.5 border-b-2 border-gray-900 border-dotted'>
                         <p className='font-bold'>Friday</p>
-                        <time className='font-mono'>9Am to 10pm</time>
+                        <time>9Am to 10pm</time>
                     </div>
                 </div>
                 <Link to="book-appointment" className='mt-6 rounded-full shadow-md btn btn-error'>

@@ -13,7 +13,7 @@ export default function BookNow() {
         >
             <div className='flex w-[85%] items-center flex-col md:flex-row justify-between gap-x-12 md:w-[80%] mx-auto'>
                 <div>
-                    <h3 className='mb-2 text-sm font-semibold text-error'>Book Now</h3>
+                    <h3 className='mb-2 font-semibold text-error'>Book Now</h3>
                     <p className='mb-2 text-2xl font-semibold md:text-xl lg:text-4xl md:w-[90%]'>Book your Appointment Online.</p>
                     <p className='mb-3 text-gray-500 md:mb-6 md:w-3/4'>Get 10% Discount on your first hair cut by using our website.</p>
                     <Link to="book-appointment" className='rounded-full btn btn-secondary'>

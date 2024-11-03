@@ -1,11 +1,26 @@
-import { Link as ScrollLink } from 'react-scroll';
-import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaServicestack } from "react-icons/fa"
+import { scroller } from 'react-scroll';
+import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt   } from "react-icons/fa"
 import logo from "../assets/img3.svg"
 import backgroundImg from "../assets/img1.png"
 import SmallMenu from './SmallMenu';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+    const navigate = useNavigate();
+
+    // Function to handle navigation and scroll
+    function navigateAndScroll(section, offset = -70) {
+        navigate('/');
+
+        setTimeout(() => {
+            scroller.scrollTo(section, {
+                smooth: true,
+                offset: offset,
+                duration: 500,
+            });
+        }, 100);
+    };
+
     return (
         <header
             className='fixed top-0 z-50 flex items-center justify-between w-full px-2 py-1 border-b border-gray-900 sm:px-8'
@@ -17,54 +32,30 @@ export default function Header() {
             <div className='items-center hidden md:flex gap-x-10'>
                 <nav>
                     <ul className='text-lg menu menu-horizontal'>
-                        <li>
-                            <ScrollLink
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                        <li >
+                            <button type="button" onClick={() => navigateAndScroll("home")}>
                                 <FaHome />
                                 Home
-                            </ScrollLink>
+                            </button>
                         </li>
-                        <li>
-                            <ScrollLink
-                                to="about"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                        <li >
+                            <button type="button" onClick={() => navigateAndScroll("about")}>
                                 <FaInfoCircle />
                                 About Us
-                            </ScrollLink>
-                        </li>
-                        <li>
-                            <ScrollLink
-                                to="services"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                <FaServicestack />
-                                Services
-                            </ScrollLink>
-                        </li>
-                        <li>
-                            <ScrollLink
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                <FaEnvelope />
+                            </button>
 
+                        </li>
+                        <li>
+                            <button type="button" onClick={() => navigateAndScroll("services")}>
+                                <FaListAlt />
+                                Services
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" onClick={() => navigateAndScroll("contact")}>
+                                <FaEnvelope />
                                 Contact
-                            </ScrollLink>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -76,8 +67,8 @@ export default function Header() {
                 </div>
             </div>
 
-            <SmallMenu />
+            <SmallMenu navigateAndScroll={navigateAndScroll} />
 
-        </header>
+        </header >
     )
 }

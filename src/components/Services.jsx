@@ -20,9 +20,9 @@ export default function Services() {
 
 
     return (
-        <section className='mt-20'>
+        <section id="services" className='mt-20'>
             <div className='w-[90%] mx-auto text-center md:w-3/4 lg:w-1/2'>
-                <h6 className='mb-2 text-sm capitalize text-error'>Our Services</h6>
+                <h6 className='mb-2 font-semibold capitalize text-error'>Our Services</h6>
                 <p className='text-2xl font-semibold capitalize md:text-3xl lg:text-4xl'>Popular Hair Cutting And Salon</p>
             </div>
             <div className='w-[90%] mx-auto mt-8'>

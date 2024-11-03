@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import { FaArrowRight, FaBars, FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaServicestack } from 'react-icons/fa'
-import { Link as ScrollLink } from 'react-scroll';
+import { FaArrowRight, FaBars, FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from 'react-icons/fa'
 import backgroundImg from "../assets/img1.png"
 import { Link } from 'react-router-dom';
 
 
-export default function SmallMenu() {
+export default function SmallMenu({ navigateAndScroll }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     function handleMenuToggle() {
         setIsMenuOpen(!isMenuOpen);
     }
 
-    function closeMenu() {
+    function closeMenu(section) {
+        navigateAndScroll(section, -95)
         setIsMenuOpen(false)
     }
 
@@ -36,56 +36,28 @@ export default function SmallMenu() {
                 <nav>
                     <ul className='w-full pt-5 menu menu-vertical *:text-lg' >
                         <li>
-                            <ScrollLink
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                onClick={closeMenu}
-                            >
+                            <button type='button' onClick={() => closeMenu("home")}>
                                 <FaHome size={25} />
                                 Home
-                            </ScrollLink>
+                            </button>
                         </li>
                         <li>
-                            <ScrollLink
-                                to="about"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                onClick={closeMenu}
-                            >
+                            <button type='button' onClick={() => closeMenu("about")}>
                                 <FaInfoCircle size={25} />
                                 About Us
-                            </ScrollLink>
+                            </button>
                         </li>
                         <li>
-                            <ScrollLink
-                                to="services"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                onClick={closeMenu}
-                            >
-                                <FaServicestack size={25} />
+                            <button type='button' onClick={() => closeMenu("services")}>
+                                <FaListAlt size={25} />
                                 Services
-                            </ScrollLink>
+                            </button>
                         </li>
                         <li>
-                            <ScrollLink
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                                onClick={closeMenu}
-                            >
+                            <button type='button' onClick={() => closeMenu("contact")}>
                                 <FaEnvelope size={25} />
                                 Contact
-                            </ScrollLink>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -100,7 +72,7 @@ export default function SmallMenu() {
                     </Link>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

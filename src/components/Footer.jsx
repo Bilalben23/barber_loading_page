@@ -23,10 +23,10 @@ export default function Footer() {
                 ></iframe>
             </div>
 
-            <div className='px-5'>
+            <div id="contact" className='px-5'>
                 {/* Contact Section */}
                 <div className='my-8'>
-                    <h6 className='mb-5 text-xl font-bold text-center text-error'>Get In Touch </h6>
+                    <h6 className='mb-5 font-bold text-center text-error'>Get In Touch </h6>
                     <div className="flex flex-wrap items-center justify-between gap-5">
                         <ContactItem icon={FaMapMarkerAlt} title="Our Address" content="123 Main Street, City, ZIP Code, Country" />
                         <ContactItem icon={FaPhone} title="Call Us" content={PHONE_NUMBER} />
@@ -41,7 +41,7 @@ export default function Footer() {
                     <div>
                         <div className='flex items-center text-sm gap-x-1'>
                             <FaCopyright />
-                            <p><span className='font-sans'>{date.getFullYear()} </span> All Copyrights Reserved To Barbero</p>
+                            <p><span className='font-semibold'>{date.getFullYear()} </span> All Copyrights Reserved To Barbero</p>
                         </div>
                     </div>
                     <div className='flex items-center gap-x-4'>
