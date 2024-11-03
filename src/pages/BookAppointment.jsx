@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { FaCalendarCheck, FaChevronLeft } from 'react-icons/fa';
+import { FaCalendarCheck, FaChevronLeft, FaInfo } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -11,7 +11,6 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function BookAppointment() {
     const [loading, setLoading] = useState(false)
-
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -19,6 +18,9 @@ export default function BookAppointment() {
         time: '',
         message: '',
     });
+
+    const location = useLocation();
+    const serviceName = location.state?.serviceName;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -47,6 +49,7 @@ export default function BookAppointment() {
                 name: formData.name,
                 phone: formData.phone,
                 date: formattedDate,
+                serviceName: serviceName || "No Service chosen",
                 time: formData.time,
                 message: formData.message
             },
@@ -95,7 +98,7 @@ export default function BookAppointment() {
 
     return (
         <section className='my-24'>
-            <h2 className='mb-7 text-xl lg:text-3xl md:text-2xl font-bold text-center text-error flex items-center justify-center'>
+            <h2 className='flex items-center justify-center text-xl font-bold text-center mb-7 lg:text-3xl md:text-2xl text-error'>
                 <FaCalendarCheck className='mr-2' />
                 Book Your Appointment
             </h2>
@@ -104,6 +107,14 @@ export default function BookAppointment() {
                 className='max-w-lg p-8 mx-auto md:rounded shadow-md bg-[#F5F5F5]'
 
             >
+                {
+                    serviceName && <h3 className='flex items-center mb-3 text-info gap-x-2'>
+                        <div>
+                            <FaInfo size={10} className="p-1.5 btn btn-circle btn-xs btn-info shadow" />
+                        </div>
+                        <p>You selected <span className='font-semibold'>{serviceName}</span> service.</p>
+                    </h3>
+                }
                 <div className='mb-4'>
                     <label htmlFor='name' className='block mb-0.5 font-medium text-gray-800'>Name</label>
                     <input
@@ -113,7 +124,7 @@ export default function BookAppointment() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className='w-full input input-bordered input-secondary capitalize'
+                        className='w-full capitalize input input-bordered input-secondary'
                         placeholder='Your Name...'
                     />
                 </div>
@@ -173,7 +184,7 @@ export default function BookAppointment() {
                 </button>
             </form>
             <div className='max-w-lg mx-auto mt-3'>
-                <Link to="/" className='btn btn-primary rounded-full'>
+                <Link to="/" className='rounded-full btn btn-primary'>
                     <FaChevronLeft size={20} />
                     Go Back
                 </Link>

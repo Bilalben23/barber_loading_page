@@ -23,7 +23,7 @@ export default function ServiceDetailsCard({ service }) {
                     }
                 </div>
                 <div className='mt-5'>
-                    <Link to="book-appointment" className='rounded-full btn-secondary btn btn-outline'>
+                    <Link to="book-appointment" state={{ serviceName: service.serviceName }} className='rounded-full btn-secondary btn btn-outline'>
                         <FaCalendarAlt size={20} />
                         Book Now
                     </Link>
