@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { FaArrowRight, FaBars, FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from 'react-icons/fa'
-import backgroundImg from "../assets/img1.png"
+import backgroundImg from "../../assets/img1.png"
 import { Link, useNavigate } from 'react-router-dom';
-import { navigateAndScroll } from '../helpers/navigateAndScroll';
+import { navigateAndScroll } from '../../helpers/navigateAndScroll';
 
 
 export default function SmallMenu() {

@@ -1,16 +1,16 @@
 import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from "react-icons/fa"
-import logo from "../assets/img3.svg"
-import backgroundImg from "../assets/img1.png"
+import logo from "../../assets/img3.svg"
+import backgroundImg from "../../assets/img1.png"
 import SmallMenu from './SmallMenu';
 import { Link, useNavigate } from 'react-router-dom';
-import { navigateAndScroll } from "../helpers/navigateAndScroll";
+import { navigateAndScroll } from "../../helpers/navigateAndScroll";
 
 export default function Header() {
     const navigate = useNavigate()
 
     return (
         <header
-            className='fixed top-0 z-50 flex items-center justify-between w-full px-2 py-1 border-b border-gray-900 sm:px-8'
+            className='fixed top-0 z-50 flex items-center justify-between w-full px-2 py-0.5 border-b border-gray-900 sm:px-8'
             style={{ background: `url(${backgroundImg}) center center no-repeat`, backgroundSize: "cover" }}
         >
             <div>
@@ -54,8 +54,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <SmallMenu  />
-
+            <SmallMenu />
         </header >
     )
 }

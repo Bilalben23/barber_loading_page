@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
-import { services } from "../data/services"
-import ServiceIconCard from '../cards/ServiceIconCard'
-import ServiceDetailsCard from "../cards/ServiceDetailsCard"
-import clickSnap from "../assets/click-snap.wav"
+import { services } from "../../data/services"
+import ServiceIconCard from './ServiceIconCard'
+import ServiceDetailsCard from "./ServiceDetailsCard"
+import clickSnap from "../../assets/click-snap.wav"
 
 export default function Services() {
 

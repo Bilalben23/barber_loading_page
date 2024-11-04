@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './Header'
+import Header from './navbar/Header'
 import { Outlet } from 'react-router-dom'
-import Footer from './Footer'
-import BackTopBtn from './BackTopBtn'
-import ContactButtons from "../components/ContactButtons"
+import Footer from './footer/Footer'
+import BackTopBtn from './buttons/BackTopBtn'
+import ContactButtons from "./buttons/ContactButtons"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

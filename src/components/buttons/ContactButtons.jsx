@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaWhatsapp, FaPhone, FaEnvelope, FaCommentDots } from 'react-icons/fa';
-import clickSoundAudio from "../assets/tic-toc-click.wav"
+import clickSoundAudio from "../../assets/tic-toc-click.wav"
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
 const PHONE_NUMBER = import.meta.env.VITE_PHONE_NUMBER;

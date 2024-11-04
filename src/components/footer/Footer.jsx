@@ -46,7 +46,7 @@ export default function Footer() {
                     </div>
                     <div className='flex items-center gap-x-4'>
                         <SocialIcon tooltip="Facebook" icon={FaFacebook} href="#" color="text-blue-500" />
-                        <SocialIcon tooltip="Instagram" icon={FaInstagram} href="#" color="text-pink-500" />
+                        <SocialIcon tooltip="Instagram" icon={FaInstagram} href="https://www.instagram.com/barberialto?igsh=N3dianlzMWRmbXVz" color="text-pink-500" />
                     </div>
                 </div>
             </div>

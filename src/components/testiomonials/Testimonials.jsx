@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
-import testimonialsData from "../data/testimonials.json"
-import TestimonialCard from '../cards/TestimonialCard'
+import testimonialsData from "../../data/testimonials.json"
+import TestimonialCard from './TestimonialCard'
 
 export default function Testimonials() {
     return (
@@ -16,7 +16,6 @@ export default function Testimonials() {
                     Give Review
                 </a>
             </div>
-
             <div className="flex-1 py-5 overflow-x-auto carousel gap-x-6">
                 {
                     testimonialsData.map(testimonial => (
@@ -26,8 +25,8 @@ export default function Testimonials() {
                         />
                     ))
                 }
-            </div>
 
+            </div>
         </div>
     )
 }
