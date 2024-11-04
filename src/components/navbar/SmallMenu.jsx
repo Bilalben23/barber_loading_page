@@ -7,17 +7,17 @@ import { navigateAndScroll } from '../../helpers/navigateAndScroll';
 
 export default function SmallMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     function handleMenuToggle() {
         setIsMenuOpen(!isMenuOpen);
     }
 
     function closeMenu(section) {
-        navigateAndScroll(section, -95)
+        navigateAndScroll(navigate, section, -95)
         setIsMenuOpen(false)
     }
 
-    const navigate = useNavigate();
 
 
     return (
@@ -39,25 +39,25 @@ export default function SmallMenu() {
                 <nav>
                     <ul className='w-full pt-5 menu menu-vertical *:text-lg' >
                         <li>
-                            <button type='button' onClick={() => closeMenu(navigate, "home")}>
+                            <button type='button' className='text-lg' onClick={() => closeMenu("home")}>
                                 <FaHome size={25} />
                                 Home
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu(navigate, "about")}>
+                            <button type='button' className='text-lg' onClick={() => closeMenu("about")}>
                                 <FaInfoCircle size={25} />
                                 About Us
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu(navigate, "services")}>
+                            <button type='button' className='text-lg' onClick={() => closeMenu("services")}>
                                 <FaListAlt size={25} />
                                 Services
                             </button>
                         </li>
                         <li>
-                            <button type='button' onClick={() => closeMenu(navigate, "contact")}>
+                            <button type='button' className='text-lg' onClick={() => closeMenu("contact")}>
                                 <FaEnvelope size={25} />
                                 Contact
                             </button>

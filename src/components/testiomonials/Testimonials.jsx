@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaStar } from 'react-icons/fa'
-import testimonialsData from "../../data/testimonials.json"
+import { testimonialsData } from "../../data/testimonials"
 import TestimonialCard from './TestimonialCard'
 
 export default function Testimonials() {
@@ -11,7 +11,7 @@ export default function Testimonials() {
                 <p className='mb-2 text-2xl font-semibold md:text-3xl lg:text-4xl'>What Our Clients Say About Us</p>
                 <p className='mb-6 text-gray-500'>Let your hairdressers do their amazing job. Trim the hair to get your desired look. Book appointment with us for your favorite hair Styles!</p>
 
-                <a href="#" className='rounded-full shadow btn btn-secondary group'>
+                <a href="https://www.instagram.com/barberialto?igsh=N3dianlzMWRmbXVz" className='rounded-full shadow btn btn-secondary group'>
                     <FaStar size={20} className='text-yellow-400 drop-shadow-md group-[:hover]:animate-spin' />
                     Give Review
                 </a>

@@ -4,10 +4,19 @@ import img2 from "../assets/img2.png"
 import { FaCalendarCheck } from 'react-icons/fa'
 import { BiListCheck } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
-
+import { scroller } from 'react-scroll';
 
 
 export default function Hero() {
+
+    function scrollToAllServicesSection() {
+        scroller.scrollTo("services", {
+            smooth: true,
+            offset: -95,
+            duration: 500,
+        });
+    }
+
     return (
         <div id="home"
             className='w-full h-auto md:h-screen pt-[90px] flex flex-col-reverse md:flex-row justify-between gap-x-4'
@@ -23,7 +32,7 @@ export default function Hero() {
                             <FaCalendarCheck />
                             Book Now
                         </Link>
-                        <button type="button" className='flex items-center rounded-full shadow btn btn-outline btn-secondary'>
+                        <button type="button" className='flex items-center rounded-full shadow btn btn-outline btn-secondary' onClick={scrollToAllServicesSection} >
                             <BiListCheck size={30} />
                             All Services
                         </button>
@@ -31,7 +40,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div>
+            <div className='select-none' draggable="false">
                 <img src={img2} alt="barber" className='w-full md:h-full' />
             </div>
         </div>
