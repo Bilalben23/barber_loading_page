@@ -1,5 +1,5 @@
 import { FaCalendarAlt, FaEnvelope, FaHome, FaInfoCircle, FaListAlt } from "react-icons/fa"
-import logo from "../../assets/img3.svg"
+import logo from "../../assets/logo.webp"
 import backgroundImg from "../../assets/img1.png"
 import SmallMenu from './SmallMenu';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,11 +10,11 @@ export default function Header() {
 
     return (
         <header
-            className='fixed top-0 z-50 flex items-center justify-between w-full px-2 py-0.5 border-b border-gray-900 sm:px-8'
+            className='fixed top-0 z-40 flex items-center justify-between w-full px-2 py-0.5 border-b border-gray-900 sm:px-8'
             style={{ background: `url(${backgroundImg}) center center no-repeat`, backgroundSize: "cover" }}
         >
             <div>
-                <img src={logo} alt="logo" className='w-16 h-16' />
+                <img src={logo} alt="logo" className='w-10 h-10 md:w-12 md:h-12 rounded-full' />
             </div>
             <div className='items-center hidden md:flex gap-x-10'>
                 <nav>

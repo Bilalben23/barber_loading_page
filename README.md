@@ -6,12 +6,18 @@ An elegant, responsive Barber Shop website built with React, featuring a sleek l
 
 This app is designed as a visually engaging landing page for **Barbero**, a premium barber shop. It showcases the services, client testimonials, working hours, and contact information. The site encourages customers to book appointments online and provides all necessary details to make the process seamless and professional.
 
-### Technologies Used
+### Technology Stack
 
-- **React**: A JavaScript library for building user interfaces.
-- **React Icons**: Used for adding icons in the application.
-- **Tailwind CSS**: A utility-first CSS framework for styling.
-- **DaisyUI**: A plugin for Tailwind CSS that provides pre-designed components.
+This project uses the following technologies and libraries:
+
+- **React**: A JavaScript library for building fast and responsive user interfaces.
+- **React Icons**: Used to easily add icons to components, including social media and star icons.
+- **React Router DOM**: Provides routing capabilities to navigate between pages or components within the app.
+- **React Toastify**: Offers customizable, easy-to-use toast notifications within the app.
+- **React Scroll**: Allows for smooth scrolling animations, enhancing the user experience.
+- **Vite**: A modern build tool that boosts development speed and provides faster hot-reload for React apps.
+- **Tailwind CSS**: A utility-first CSS framework that enables rapid and responsive UI development.
+- **DaisyUI**: A Tailwind CSS plugin that provides pre-built, customizable components for faster UI development.
 
 ### Key Features
 

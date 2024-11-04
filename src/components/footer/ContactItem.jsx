@@ -6,7 +6,7 @@ export default function ContactItem({ icon: Icon, title, content }) {
             </div>
             <div className='text-sm'>
                 <p className="font-semibold">{title}:</p>
-                <p className="font-sans">{content}</p>
+                <p className="font-sans select-all">{content}</p>
             </div>
         </div>
     );
